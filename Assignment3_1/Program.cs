@@ -16,7 +16,21 @@ namespace Assignment3_1
             Console.WriteLine(evenNumbers);
 
             Console.WriteLine();
-            Console.WriteLine("Press enter to continue...Assignment 3.2, etc");
+            Console.WriteLine("Press enter to continue...Assignment 3.1.2");
+            Console.ReadLine();
+
+            Console.WriteLine("=================================");
+            Console.WriteLine("         Assignment3_1_2");
+            Console.WriteLine("=================================\n\n");
+            Console.WriteLine("2. If year is leapGiven a year as integer, write a method that checks if year is leap.Expected input and outputIfYearIsLeap(2016) → true IfYearIsLeap(2018) → false");
+
+            Console.WriteLine("Please enter a year, and press ENTER to check whether it's a leap year.");
+            int year = Convert.ToInt32(Console.ReadLine());
+            bool isLeapYear = IsLeapYear(year);
+            Console.WriteLine($"\nIs {year} a leap year? " + isLeapYear);
+
+            Console.WriteLine();
+            Console.WriteLine("Press enter to continue...Assignment 3.1.3");
             Console.ReadLine();
         }
 
@@ -32,6 +46,11 @@ namespace Assignment3_1
                 }
             }
             return evenNumbers.ToString();
+        }
+
+        static bool IsLeapYear(int year)
+        {
+            return year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
         }
     }
 }
